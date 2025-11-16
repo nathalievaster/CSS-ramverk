@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 - Utveckling med ramverk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Moment 1 - Utveckling med ramverk</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Startsida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tailwind.html">Tailwind</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="bootstrap.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicering.html">Publicering</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+<style>
+      .bg-own {
+    background: linear-gradient(135deg, #ff80bf, #ffcc70);
+    color: white;
+  }
+</style>
+
+    <main>
+        <div class="container my-4 bg-own p-4 rounded shadow text-center">
+            <h1 class="text-center fw-bold mb-4">Bootstrap</h1>
+            <p>Bootstrap är ett av de mest populära CSS-ramverken och erbjuder en mängd färdiga komponenter
+                och ett responsivt rutnätssystem. Det gör det enkelt att skapa enhetliga och professionella
+                webbplatser snabbt. Dokumentation hittar man på <a
+                    href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+            </p>
+            <br>
+            <p>Till skillnad från Tailwind, så erbjuder Bootstrap färdiga komponenter, som t.ex färdiga knappar, eller
+                meny-ikonen som används i navigationen ovan. Detta gör det väldigt snabbt att komma igång och skapa en
+                sida med enhetlig design. Nackdelen är att det kan bli svårt att anpassa sin egen design, och att ens
+                sida
+                blir väldigt lik andras som också använder Bootstrap. Där kan det kanske vara bra att göra en lite
+                avvägning
+                - är det viktigare att snabbt få upp en sida, eller att ha en säregen design som sticker ut?
+            </p>
+            <br>
+            <p> Jag är väl medveten om att designen på detta innehåll inte är fantastiskt - jag ville mest bara testa runt 
+                lite och se hur man kan försöka åstadkomma egen design. Men det är svårt!
+            </p>
+        </div>
+
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Deltagare</h2>
+
+            
+            <div class="table-responsive mx-auto">
+                <table class="table table-striped table-bordered shadow-sm table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Namn</th>
+                            <th scope="col">Ålder</th>
+                            <th scope="col">Stad</th>
+                            <th scope="col">Sysselsättning</th>
+                        </tr>
+                    </thead>
+                    <tbody class="hover">
+                        <tr>
+                            <td>Anna Svensson</td>
+                            <td>28</td>
+                            <td>Stockholm</td>
+                            <td>Anställd</td>
+                        </tr>
+                        <tr>
+                            <td>Erik Johansson</td>
+                            <td>34</td>
+                            <td>Göteborg</td>
+                            <td>Student</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Karlsson</td>
+                            <td>25</td>
+                            <td>Malmö</td>
+                            <td>Arbetslös</td>
+                        </tr>
+                        <tr>
+                            <td>Johan Lindberg</td>
+                            <td>30</td>
+                            <td>Uppsala</td>
+                            <td>Anställd</td>
+                        </tr>
+                        <tr>
+                            <td>Elin Andersson</td>
+                            <td>22</td>
+                            <td>Västerås</td>
+                            <td>Student</td>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-center mt-5 mb-3">Lägg till ny deltagare</h3>
+            <form class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Namn</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                    <div id="nameHelp" class="form-text">Ange ditt fullständiga namn.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="age" class="form-label">Ålder</label>
+                    <input type="number" class="form-control" id="age">
+                </div>
+
+                <div class="mb-3">
+                    <label for="city" class="form-label">Stad</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+
+                <div class="mb-3">
+                    <label for="employment" class="form-label">Anställningsstatus</label>
+                    <select class="form-select" id="employment">
+                        <option value="employed">Anställd</option>
+                        <option value="unemployed">Arbetslös</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="checkbox">
+                    <label class="form-check-label" for="checkbox">Jag godkänner att jag läggs till i tabellen</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-5">Skicka</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 - Utveckling med ramverk</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="font-bold m-0">Moment 1 - Utveckling med ramverk</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a class="block w-full px-3 py-2 font-semibold hover:underline" href="index.html">Startsida</a>
+                    </li>
+                    <li><a class="block w-full px-3 py-2 font-semibold hover:underline"
+                            href="tailwind.html">Tailwind</a></li>
+                    <li><a class="block w-full px-3 py-2 font-semibold hover:underline"
+                            href="bootstrap.html">Bootstrap</a></li>
+                    <li><a class="block w-full px-3 py-2 font-semibold hover:underline"
+                            href="publicering.html">Publicering</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="card">
+        <h1 class="text-center font-bold text-3xl">Tailwind CSS</h1>
+        <p>Tailwind CSS är ett utility-first CSS-ramverk som möjliggör snabb och effektiv design av webbplatser
+            genom att använda fördefinierade klasser direkt i HTML-koden. Istället för att skriva anpassad CSS
+            för varje element, kan utvecklare använda Tailwinds omfattande uppsättning av klasser för att styla sina
+            komponenter snabbt. Man hittar dokumentation på tailwinds officiella hemsida: <a
+                class="font-semibold underline" href="https://tailwindcss.com/">https://tailwindcss.com/</a>
+            <br>
+            <br>
+            Vid första anblick kände jag endast att detta skulle röra till alltihop. Jag känner att det varit kämpigt
+            att lära sig CSS ordentligt, och att då nu behöva lära om sig kändes onödigt och krångligt. Tack vare sidan
+            <a class="font-semibold underline"
+                href="https://nerdcave.com/tailwind-cheat-sheet">https://nerdcave.com/tailwind-cheat-sheet</a>
+            så var det lätt att hitta de olika klasserna och vad dom gjorde. Efter tips från Malin att även installera
+            Tailwinds Intellisense
+            här i VSCode, så blev det ännu enklare att hitta rätt och utvecklingen gick plötsligt hur fort som helst!
+            <br>
+            <br>
+            En annan sak som gjorde mig skeptisk var att skriva stil direkt i HTML-filen, då jag fått lära mig
+            att man ska strukturera sin kod
+            och separera design från innehåll. Gärna dela upp i olika filer för att hålla det rent och lättöverskådligt.
+            Nu skulle man istället göra
+            motsatsen till det? Men efter att ha kollat denna videon
+            <a class="font-semibold underline"
+                href="https://www.youtube.com/watch?v=6biMWgD6_JY">https://www.youtube.com/watch?v=6biMWgD6_JY</a>
+            fick jag värdefulla tips om hur man kan dela upp det i layer components istället, och hålla koden mer DRY. I
+            det här fallet med en så
+            enkel hemsida hade det egentligen inte varit några problem med att ha lite upprepande klasser, men det var
+            kul att testa hur det hade
+            fungerat med mer uppdelat. Jag ser även redan nu hur bra detta kommer fungera med ramverk som React.
+            <br>
+            <br>
+            Sammanfattningsvis är Tailwind CSS ett kraftfullt verktyg för webbutvecklare som vill skapa moderna,
+            responsiva och anpassningsbara webbplatser på ett effektivt sätt.
+        </p>
+    </main>
+    <table class="table-auto w-full border-collapse border border-gray-400 my-6 lg:max-w-3xl mx-auto">
+        <thead class="bg-pink-100 font-semibold">
+            <tr>
+                <th class="borderstyle">ID</th>
+                <th class="borderstyle">Namn</th>
+                <th class="borderstyle">Kategori</th>
+                <th class="borderstyle">Kommentar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="borderstyle">1</td>
+                <td class="borderstyle">Exempel 1</td>
+                <td class="borderstyle">A</td>
+                <td class="borderstyle">Lorem ipsum ipsum</td>
+            </tr>
+            <tr>
+                <td class="borderstyle">2</td>
+                <td class="borderstyle">Exempel 2</td>
+                <td class="borderstyle">B</td>
+                <td class="borderstyle">Lorem ipsum ipsum</td>
+            </tr>
+            <tr>
+                <td class="borderstyle">3</td>
+                <td class="borderstyle">Exempel 3</td>
+                <td class="borderstyle">A</td>
+                <td class="borderstyle">Lorem ipsum ipsum</td>
+            </tr>
+            <tr>
+                <td class="borderstyle">4</td>
+                <td class="borderstyle">Exempel 4</td>
+                <td class="borderstyle">C</td>
+                <td class="borderstyle">Lorem ipsum ipsum</td>
+            </tr>
+            <tr>
+                <td class="borderstyle">5</td>
+                <td class="borderstyle">Exempel 5</td>
+                <td class="borderstyle">B</td>
+                <td class="borderstyle">Lorem ipsum ipsum</td>
+            </tr>
+        </tbody>
+    </table>
+    <form class="flex flex-col gap-4 my-6 max-w-md lg:max-w-1/2 mx-auto">
+
+        <!-- Text input -->
+        <label class="flex flex-col">
+            Namn
+            <input type="text" class="border border-gray-400 p-2" placeholder="Ange namn" required />
+        </label>
+
+        <!-- Select -->
+        <label class="flex flex-col">
+            Kategori
+            <select class="border border-gray-400 p-2">
+                <option value="A">Kategori A</option>
+                <option value="B">Kategori B</option>
+                <option value="C">Kategori C</option>
+            </select>
+        </label>
+
+        <!-- Textarea -->
+        <label class="flex flex-col">
+            Kommentar
+            <textarea class="border border-gray-400 p-2 h-24" placeholder="Lägg till kommentar"></textarea>
+        </label>
+
+        <!-- Checkbox -->
+        <label class="flex items-center gap-2">
+            <input type="checkbox" />
+            Aktiv post
+        </label>
+
+        <!-- Submit -->
+        <button type="button" class="max-w-[200px] bg-pink-600 hover:bg-pink-700 text-white p-2 rounded">
+            Spara
+        </button>
+
+    </form>
+
+</body>
+
+</html>
