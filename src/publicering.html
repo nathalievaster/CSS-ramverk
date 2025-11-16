@@ -33,6 +33,57 @@
             </div>
         </div>
     </nav>
+
+    <section class="container my-5 card p-4 shadow">
+  <h2 class="text-center fw-bold mb-4">Publicering</h2>
+
+  <p>
+    För att publicera min webbplats har jag valt plattformen <strong>Cloudflare Pages</strong>. Det är en
+    modern och snabb tjänst för att hosta statiska webbplatser, vilket passar perfekt för ett projekt som
+    använder HTML, CSS (Tailwind och Bootstrap) och lite JavaScript. Plattformen har stöd för de flesta
+    statiska ramverk och byggverktyg, såsom React, Vue, Astro och Vite, samt Node-baserade miljöer via
+    Cloudflare Workers om man vill bygga mer avancerade funktioner.
+  </p>
+
+  <p>
+    Cloudflare Pages erbjuder en <strong>gratisplan</strong> som inkluderar global CDN-distribution, SSL-certifikat
+    och automatisk bygg- och deploy-process kopplad till GitHub. Det finns även betalnivåer med fler
+    byggarbeten per månad och stöd för team, men för mindre projekt räcker gratisversionen mer än väl.
+  </p>
+
+  <h5 class="mt-4">Fördelar</h5>
+  <ul>
+    <li>Mycket snabb global leverans via Cloudflares CDN.</li>
+    <li>Enkel integration med GitHub – automatiska builds vid varje commit.</li>
+    <li>Stöd för moderna ramverk och byggverktyg.</li>
+  </ul>
+
+  <h5 class="mt-3">Nackdelar</h5>
+  <ul>
+    <li>Endast statiska sidor – ingen traditionell server-side-kod som PHP.</li>
+    <li>Lite mer teknisk setup än enklare webbhotell om man inte använt Git tidigare.</li>
+  </ul>
+
+  <h5 class="mt-4">Arbetssätt vid publicering</h5>
+  <p>
+    Arbetsflödet är mycket smidigt. Jag utvecklar lokalt i Visual Studio Code och använder Git för versionshantering.
+    När jag gör en förändring och vill uppdatera webbplatsen kör jag:
+  </p>
+
+  <pre><code>git add .
+git commit -m "uppdaterade designen"
+git push
+</code></pre>
+
+  <p>
+    Cloudflare Pages är kopplat till mitt GitHub-repo och startar automatiskt en ny build när jag pushar ändringar.
+    Efter några sekunder är den nya versionen tillgänglig online på min tilldelade adress.
+    Jag kan även koppla en egen domän om jag vill. Problemet för mig var bara att jag inte tänkt på att koppla projektet
+    till ett repo, så det fick jag göra i efterhand. Jag har tidigare använt Netlify och där är det samma sak, att man 
+    kopplar ett Git-repo för automatisk deploy. Detta är anledningen till att det i repot saknas commits.
+  </p>
+</section>
+
 </body>
 
 </html>
